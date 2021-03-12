@@ -37,6 +37,12 @@ a{
         height: 48px;
         border-radius: 3px;
         background: #3F51B5;
+        transition: all 0.3s ease 0s;
+
+        &:hover{
+            transform:translateY(-4px);
+            box-shadow: 0 3px 6px 0 rgba(#000000, 0.6);
+        }
     }
 
     .btn2{
@@ -45,6 +51,7 @@ a{
         border-radius: 3px;
         background: #3F51B5;
         position: relative;
+        transition: all 1s linear 0s;
 
         &::after{
             content:"";
@@ -54,6 +61,10 @@ a{
             width: 7px;
             height: 16px;
         }
+
+        &:hover {
+            transform: rotateX(360deg);
+        }
     }
 
     .btn3{
@@ -62,6 +73,7 @@ a{
         border-radius: 3px;
         background: #3F51B5;
         position: relative;
+        transition: all 1s linear 0s;
 
         &::after{
             content:"";
@@ -71,6 +83,10 @@ a{
             width: 7px;
             height: 16px;
         }
+
+        &:hover {
+            transform: rotateY(360deg);
+        }
     }
 
     .btn4{
@@ -78,7 +94,13 @@ a{
         height: 48px;
         border-radius: 3px;
         background: #3F51B5;
-        box-shadow: 0px 4px 0px #25379B;
+        box-shadow: 0px 4px 0px #25379b;
+        transition: all 0.3s ease 0s;
+
+        &:hover{
+            box-shadow: 0px 0px 0px #25379b;
+            transform: translateY(4px);
+        }
     }
 
     .btn5{
@@ -86,16 +108,31 @@ a{
         height: 48px;
         border-radius: 3px;
         background: transparent linear-gradient(180deg, #3F51B5 0%, #20295B);
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            opacity: 0.6;
+          }
     }
 
-    .btn7{
+    .btn7,
+    .btn8{
         width: 120px;
         height: 120px;
         border-radius: 100%;
         background: #3F51B5;
+        transition: all 1s linear 0s;     
     }
 
-    .btn8{
+    .btn7:hover {
+        transform: rotateZ(360deg);
+    }
+    .btn8:hover{
+        cursor: pointer;
+        transform: scale(1.1, 1.1);
+    }
+
+    .btn11{
         position: relative;
         width: 241px;
         height: 48px;
@@ -110,6 +147,21 @@ a{
             width: 7px;
             height: 16px;
         }
+
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            width: 0%;
+            height: 2px;
+            background: rgb(175, 255, 122);
+            transition: all 0.3s ease 0s;
+        }
+
+        &:hover::before{
+            width: 80%;
+        }
+        
     }
 }
 
@@ -124,7 +176,14 @@ a{
     .btn6{
         width: 241px;
         height: 48px;
-        background: #000;
+        background: rgb(0, 0, 0);
         border: solid 2px #fff;
+        transition:all 0.3s;
+
+        &:hover{
+            background: #fff;
+            border: solid 2px rgb(0, 0, 0);
+            color: #000;
+        }
     }
 }

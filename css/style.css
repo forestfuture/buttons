@@ -45,6 +45,15 @@ a {
   height: 48px;
   border-radius: 3px;
   background: #3F51B5;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.inner .btn1:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.6);
 }
 
 .inner .btn2 {
@@ -53,6 +62,8 @@ a {
   border-radius: 3px;
   background: #3F51B5;
   position: relative;
+  -webkit-transition: all 1s linear 0s;
+  transition: all 1s linear 0s;
 }
 
 .inner .btn2::after {
@@ -64,12 +75,19 @@ a {
   height: 16px;
 }
 
+.inner .btn2:hover {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+}
+
 .inner .btn3 {
   width: 241px;
   height: 48px;
   border-radius: 3px;
   background: #3F51B5;
   position: relative;
+  -webkit-transition: all 1s linear 0s;
+  transition: all 1s linear 0s;
 }
 
 .inner .btn3::after {
@@ -81,13 +99,27 @@ a {
   height: 16px;
 }
 
+.inner .btn3:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
 .inner .btn4 {
   width: 241px;
   height: 48px;
   border-radius: 3px;
   background: #3F51B5;
-  -webkit-box-shadow: 0px 4px 0px #25379B;
-          box-shadow: 0px 4px 0px #25379B;
+  -webkit-box-shadow: 0px 4px 0px #25379b;
+          box-shadow: 0px 4px 0px #25379b;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.inner .btn4:hover {
+  -webkit-box-shadow: 0px 0px 0px #25379b;
+          box-shadow: 0px 0px 0px #25379b;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 .inner .btn5 {
@@ -96,16 +128,36 @@ a {
   border-radius: 3px;
   background: transparent -webkit-gradient(linear, left top, left bottom, from(#3F51B5), to(#20295B));
   background: transparent linear-gradient(180deg, #3F51B5 0%, #20295B);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.inner .btn7 {
+.inner .btn5:hover {
+  opacity: 0.6;
+}
+
+.inner .btn7,
+.inner .btn8 {
   width: 120px;
   height: 120px;
   border-radius: 100%;
   background: #3F51B5;
+  -webkit-transition: all 1s linear 0s;
+  transition: all 1s linear 0s;
 }
 
-.inner .btn8 {
+.inner .btn7:hover {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+
+.inner .btn8:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.inner .btn11 {
   position: relative;
   width: 241px;
   height: 48px;
@@ -113,13 +165,28 @@ a {
   background: #3F51B5;
 }
 
-.inner .btn8::after {
+.inner .btn11::after {
   content: "";
   position: absolute;
   right: 16px;
   background: url("../img/button-arrow@2x.png") no-repeat center center/contain;
   width: 7px;
   height: 16px;
+}
+
+.inner .btn11::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 0%;
+  height: 2px;
+  background: #afff7a;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.inner .btn11:hover::before {
+  width: 80%;
 }
 
 .blackSection {
@@ -140,6 +207,14 @@ a {
 .blackSection .btn6 {
   width: 241px;
   height: 48px;
-  background: #000;
+  background: black;
   border: solid 2px #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.blackSection .btn6:hover {
+  background: #fff;
+  border: solid 2px black;
+  color: #000;
 }
